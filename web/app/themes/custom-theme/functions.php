@@ -56,5 +56,25 @@ function bootstrapcss_style(){
 }
 add_action('wp_enqueue_scripts', 'bootstrapcss_style');
 
+// Register custom css, enqueue any css you want here.
+
+function customcss_styles(){
+	
+	global $publicDir;
+
+	wp_enqueue_style( 'app-css', $publicDir . 'css/app.css' , array(), false, 'all' );
+}
+add_action('wp_enqueue_scripts','customcss_styles');
+
+// Register custom js, enqueue any js you want here.
+
+function customjs_scripts(){
+	
+	global $publicDir;
+
+	wp_enqueue_style( 'app-jss', $publicDir . 'js/app.js' , array(), false, 'all' );
+}
+add_action('wp_enqueue_scripts','customjs_scripts');
+
 
 ?>
