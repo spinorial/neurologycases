@@ -13,6 +13,10 @@ const SECTIONS = [
 
 <!-- Displays the history of the case  -->
 
+<?php $sectionCount = 0 ?>
+
+<?php $sectionType = 'history' ?>
+
  <div class="history">
 
  	<?php foreach(SECTIONS as $sectionKey => $sectionValue): ?>
@@ -23,13 +27,30 @@ const SECTIONS = [
 
 		<div class="section-title"><?php echo $sectionValue; ?></div>
 
+
+
 		<?php if($sectionData): ?>
+
+			<?php $sectionCount++; ?>
+
+			<?= $sectionType ?>,<?= $sectionCount ?>
+
+			
+			<?php $dataCount=0; ?>
 
 			<?php foreach($sectionData as $data): ?>
 
-				<?php echo ($data['hidden']? "display:none": "display:block"); ?>
+				<?php $dataCount++; ?>
 
-				<div class="section-content" style='<?php echo ($data['hidden']? "display:none": "display:block"); ?>'><?php echo $data['details'] ?></div>
+				<?php if($data['hidden']): ?>
+
+					<div class="prompt"><?php echo $data['prompt'] ?></div>
+
+					<button class="prompt-button" id='button-<?= $sectionType ?>-<?= $sectionCount ?><?= $dataCount ?>' onclick='revealContent()'>Reveal</button>
+
+				<?php endif; ?>
+
+				<div class="section-content" id='content-<?= $sectionType ?>-<?= $sectionCount ?><?= $dataCount ?>' style='<?php echo ($data['hidden']? "display:none": "display:block"); ?>'><?php echo $data['details'] ?></div>
 
 			<?php endforeach; ?>
 

@@ -1,26 +1,22 @@
 var $ = jQuery;
 
-function revealElementById(id, me) {
-
-  // hide the this button and its prompt message
-  var $button = $('#' + me.id);
-  // $button.parent().hide();
-  $button.parent().fadeOut('100', function() {
-  	
-  });
-
-  // reveal the next element
-   $('#' + id).addClass('reveal');
 
 
+// $('.prompt-button').click(function() {
+//      alert($(this).attr('id'));
+// });
 
-  // scroll to next element
-  // scrollToAnchor(nextElementSelector);
+function revealContent(){
 
+	var buttonid = event.target.id;
+	var contentid = buttonid.replace('button','content');
+	var promptid = buttonid.replace('button','prompt');
+	
+	$('#'+contentid).fadeIn('1000', function() {
+
+		$('#'+buttonid).fadeOut('1000', function() {
+			
+		});;
+		
+	});
 }
-
-function scrollToAnchor(anchor_id) {
-  var tag = $("#" + anchor_id + "");
-  $('html,body').animate({scrollTop: tag.offset().top}, 400);
-}
-

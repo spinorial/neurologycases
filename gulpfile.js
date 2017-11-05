@@ -43,7 +43,7 @@ gulp.task('copy-js', function() {
 });
 
 
-// Watch tasks
+// Watch tasks these dont currently work
 
 gulp.task('watch', function() {
   gulp.watch(assetsDir + 'js/*.js', ['copy-js']);
