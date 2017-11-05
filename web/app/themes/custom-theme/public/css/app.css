@@ -4,11 +4,25 @@
   padding: 10px; }
 
 .prompt-button {
-  width: 100%; }
+  width: 100%;
+  background: #a3bad1; }
 
 .section {
-  border: solid 1px lightgrey; }
+  font-size: 14px;
+  padding: 5px; }
 
 .section-title {
   font-size: 24px;
-  margin-top: 5px; }
+  margin-top: 5px;
+  padding-top: 10px;
+  padding-bottom: 5px;
+  border-bottom: solid 1px lightgrey; }
+
+.entry-header {
+  padding: 5px; }
+
+.article {
+  background: #f9f9f9;
+  -webkit-box-shadow: 0px 0px 82px 11px rgba(0, 0, 0, 0.16);
+  -moz-box-shadow: 0px 0px 82px 11px rgba(0, 0, 0, 0.16);
+  box-shadow: 0px 0px 82px 11px rgba(0, 0, 0, 0.16); }
