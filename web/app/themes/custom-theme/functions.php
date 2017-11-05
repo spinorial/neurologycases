@@ -9,6 +9,12 @@ $publicDir = get_stylesheet_directory_uri() . '/public/';
 $includesDir = get_stylesheet_directory_uri() . '/includes/';
 
 
+// Includes 
+
+require_once(__DIR__ .'/includes/custompost-functions.php');
+require_once(__DIR__ .'/includes/acf-functions.php');
+
+
 // Inherit parent styles
 
 add_action( 'wp_enqueue_scripts', 'my_theme_enqueue_styles' );
