@@ -26,13 +26,13 @@ $parent_toggles = array('toggle_ul','toggle_ll','toggle_reflexes');
 
 <!-- <div class="article-sections"> -->
 
-<div>
+<div class="section">
+<div class="section-title">On Examination</div>
 
-<h2>On Examination</h2>
 
-<div class='prompt' id='examprompt'>
-<button id="exambutton" onclick="revealExamination()">Reveal</button>
-</div>
+<div class='prompt' id='examprompt'>Click to reveal examination</div>
+<button class="prompt-button" id="exambutton" onclick="revealExamination()">Reveal</button>
+
 
 <div class="examination" id="neuroexam">
 

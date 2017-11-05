@@ -1,6 +1,9 @@
 .examination {
   display: none; }
 
+.exambutton-class {
+  width: 100%; }
+
 .power_label {
   width: 50%; }
 

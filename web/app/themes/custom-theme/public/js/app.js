@@ -1,10 +1,6 @@
 var $ = jQuery;
 
-
-
-// $('.prompt-button').click(function() {
-//      alert($(this).attr('id'));
-// });
+// Reveals hidden data when button is clicked
 
 function revealContent(){
 
@@ -16,7 +12,11 @@ function revealContent(){
 
 		$('#'+buttonid).fadeOut('1000', function() {
 			
-		});;
+		});
+
+		$('#'+promptid).fadeOut('1000', function() {
+			
+		});
 		
 	});
 }

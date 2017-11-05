@@ -1,5 +1,14 @@
 .prompt {
-  text-align: center; }
+  text-align: center;
+  font-size: 16px;
+  padding: 10px; }
 
 .prompt-button {
   width: 100%; }
+
+.section {
+  border: solid 1px lightgrey; }
+
+.section-title {
+  font-size: 24px;
+  margin-top: 5px; }

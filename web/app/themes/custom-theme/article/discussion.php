@@ -1,11 +1,7 @@
 <?php 
 
-const SECTIONS = [
-    'presenting_complaint' => 'Presenting Complaint',
-    'history_of_presenting_complaint' => 'History of Presenting Complaint',
-    'past_medical_history' => 'Past Medical History',
-    'family_history' => 'Family History','differential_diagnosis_1'=>'Differential 
-    Diagnosis',
+const SECTIONSB = [
+    'differential_diagnosis_3' => 'Differential Diagnosis','discussion'=>'Discussion',
 ];
 
  ?>
@@ -17,22 +13,23 @@ const SECTIONS = [
 
 
 <!-- Change this variable for the different sectin types -->
-<?php $sectionType = 'history' ?>
+<?php $sectionType = 'discussion' ?>
 
- <div class="history">
+ <div class="discussion">
 
- 	<?php foreach(SECTIONS as $sectionKey => $sectionValue): ?>
+ 	<?php foreach(SECTIONSB as $sectionKey => $sectionValue): ?>
 
  	<?php $sectionData = get_field($sectionKey) ?>
 
- 	<?php if($sectionData): ?>
+		<?php if($sectionData): ?>
 
-	<div class='section <?php echo $sectionKey; ?>'>
+		<div class='section <?php echo $sectionKey; ?>'>
 
 		<div class="section-title"><?php echo $sectionValue; ?></div>
 
 			<?php $sectionCount++; ?>
 
+			
 			<?php $dataCount=0; ?>
 
 			<?php foreach($sectionData as $data): ?>

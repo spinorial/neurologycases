@@ -53,8 +53,7 @@
 		
         <?php get_template_part( 'article/history'); ?>     
         <?php get_template_part( 'article/neuroexam'); ?>
-        <?php //get_template_part( 'article/investigations'); ?> 
-        <?php //get_template_part( 'article/discussion'); ?>
+        <?php get_template_part( 'article/discussion'); ?>
 
 	</div>
 	<!-- .entry-content -->

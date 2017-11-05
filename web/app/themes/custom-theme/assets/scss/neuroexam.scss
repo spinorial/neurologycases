@@ -1,5 +1,11 @@
+@import 'variables';
+
 .examination{
   display: none;
+}
+
+.exambutton-class{
+	width:$prompt-button-width;
 }
 
 
