@@ -1,0 +1,22 @@
+.examination {
+  display: none; }
+
+.power_label {
+  width: 50%; }
+
+.reflexes_label {
+  width: 50%; }
+
+.reflexes {
+  border: 1px solid lightgrey;
+  margin-top: 5px; }
+
+.mrc_power {
+  border: 1px solid lightgrey;
+  margin-top: 5px; }
+
+.examtables {
+  padding: 10px; }
+
+.exambuttonHide {
+  display: none; }

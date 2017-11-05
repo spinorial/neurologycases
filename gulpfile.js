@@ -9,7 +9,7 @@ var gulp  = require('gulp');
 var sass = require('gulp-sass');
 
 gulp.task('default', [
-  'jquery_assets','bootstrap_assets','build-css'
+  'jquery_assets','bootstrap_assets','build-css','copy-js'
 ]);
 
 
@@ -36,12 +36,10 @@ gulp.task('build-css', function() {
     .pipe(gulp.dest(publicDir + 'css'));
 });
 
-//Copy the JS into public
-
+//Copy the JS into public 
 gulp.task('copy-js', function() {
   return gulp.src(assetsDir + 'js/*.js')
-    .pipe(sass())
-    .pipe(gulp.dest(publicDir + 'js/*.js'));
+    .pipe(gulp.dest(publicDir + 'js'));
 });
 
 

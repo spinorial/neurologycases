@@ -1,0 +1,38 @@
+.examination{
+  display: none;
+}
+
+
+//Set the width of the first column in the tables for the examination
+
+.power_label {
+  width: 50%;
+}
+
+.reflexes_label{
+  width: 50%;
+}
+
+//Set the border and spacing for the tables
+
+
+.reflexes{
+  border: 1px solid lightgrey;
+  margin-top:5px;
+}
+
+.mrc_power{
+  border: 1px solid lightgrey;
+  margin-top:5px;
+}
+
+
+//Set table layout
+
+.examtables{
+  padding:10px;
+}
+
+.exambuttonHide{
+  display:none;
+}

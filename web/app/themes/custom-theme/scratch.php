@@ -7,17 +7,28 @@ Template Name: Scratch
 
 <?php get_header(); ?>
 
-<div class="row">
-	
-	<div class="col-sm-3">
-		A
-	</div>
-	<div class="col-sm-3">
-		B
-	</div>
+<br>
+
+<?php $pc = get_field('presenting_complaint', 177); ?>
 
 
-</div>
+
+<?php var_dump($pc); ?>
+
+<br>
+
+<br>
+
+<?php $pc = get_field('history_of_presenting_complaint', 177); ?>
+
+
+
+<?php var_dump($pc); ?>
+
+<br>
+
+
+
 
 
 <?php get_footer(); ?>
