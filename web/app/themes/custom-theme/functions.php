@@ -35,26 +35,6 @@ function jquery_script() {
 }
 add_action('wp_enqueue_scripts', 'jquery_script');
 
-// Register Bootstrap JS
-
-function bootstrapjs_script() {
-   
-    global $publicDir;
-    
-    wp_enqueue_script('bootstrap-js', $publicDir . 'js/bootstrap.js', array('jquery'), null, true);
-    
-}
-add_action('wp_enqueue_scripts', 'bootstrapjs_script');
-
-// Register Bootstrap CSS
-
-function bootstrapcss_style(){
-
-	global $publicDir;
-
-	wp_enqueue_style( 'bootstrap-css', $publicDir . 'css/bootstrap.css', array(), false, 'all' );
-}
-add_action('wp_enqueue_scripts', 'bootstrapcss_style');
 
 // Register custom css, enqueue any css you want here.
 
@@ -62,8 +42,11 @@ function customcss_styles(){
 	
 	global $publicDir;
 
+	wp_enqueue_style( 'bootstrap-css', $publicDir . 'css/bootstrap.css', array(), false, 'all' );
 	wp_enqueue_style( 'app-css', $publicDir . 'css/app.css' , array(), false, 'all' );
 	wp_enqueue_style( 'neuroexam-css', $publicDir . 'css/neuroexam.css' , array(), false, 'all' );
+	wp_enqueue_style( 'homepage-css', $publicDir . 'css/homepage.css' , array(), false, 'all' );
+	
 }
 add_action('wp_enqueue_scripts','customcss_styles');
 
@@ -73,6 +56,7 @@ function customjs_scripts(){
 	
 	global $publicDir;
 
+	wp_enqueue_script('bootstrap-js', $publicDir . 'js/bootstrap.js', array('jquery'), null, true);
 	wp_enqueue_script( 'app-js', $publicDir . 'js/app.js' , array(), false, 'all' );
 	wp_enqueue_script( 'neuroexam-js', $publicDir . 'js/neuroexam.js' , array('jquery'), false, 'all');
 }

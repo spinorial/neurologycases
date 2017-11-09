@@ -23,7 +23,7 @@
 <body <?php body_class(); ?> itemscope="itemscope" itemtype="http://schema.org/WebPage">
 
 <?php // Displays full-width featured image on Single Posts if applicable ?>
-<?php independent_publisher_full_width_featured_image(); ?>
+<?php //independent_publisher_full_width_featured_image(); ?>
 
 <?php // Makes the Header Image a small icon floating in the top left corner when Multi Author Mode is enabled ?>
 <?php if ( independent_publisher_is_multi_author_mode() && is_single() ) : ?>

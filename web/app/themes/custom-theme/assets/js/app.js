@@ -1,7 +1,5 @@
 var $ = jQuery;
 
-// Reveals hidden data when button is clicked
-
 function revealContent(){
 
 	var buttonid = event.target.id;
@@ -10,7 +8,7 @@ function revealContent(){
 	
 	$('#'+contentid).fadeIn('1000', function() {
 
-		$('#'+buttonid).fadeOut('1000', function() {
+		 $('#'+buttonid).fadeOut('1000', function() {
 			
 		});
 
@@ -20,3 +18,15 @@ function revealContent(){
 		
 	});
 }
+
+
+$("button").hover(
+	function(){
+		 $(this).attr("css","background:blue");
+		//$(this).css('color', '#aaa');
+		console.log("hover");
+	},
+	function(){
+		$(this).attr("css","background:");
+		console.log("hover out");
+	});

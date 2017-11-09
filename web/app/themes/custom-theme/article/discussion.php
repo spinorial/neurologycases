@@ -1,7 +1,7 @@
 <?php 
 
 const SECTIONSB = [
-    'differential_diagnosis_3' => 'Differential Diagnosis','discussion'=>'Discussion',
+    'differential_diagnosis_3' => 'Differential Diagnosis','discussion'=>'Discussion'
 ];
 
  ?>
@@ -44,15 +44,27 @@ const SECTIONSB = [
 
 				<?php endif; ?>
 
-				<div class="section-content" id='content-<?= $sectionType ?>-<?= $sectionCount ?><?= $dataCount ?>' style='<?php echo ($data['hidden']? "display:none": "display:block"); ?>'><?php echo $data['details'] ?></div>
+				<div class="section-content" id='content-<?= $sectionType ?>-<?= $sectionCount ?><?= $dataCount ?>' style='<?php echo ($data['hidden']? "display:none": "display:block"); ?>'><?php echo $data['details'] ?>
+
+
+					<?php if($sectionKey=='discussion'): ?>
+
+					<div class="section-title">References</div>
+
+					<div class="section-content"><?php echo get_field('references') ?></div>
+
+					<?php endif; ?>
+					
+
+				</div>
 
 			<?php endforeach; ?>
 
 		<?php endif; ?>
 
+
 	</div>
 
 	<?php endforeach ?>
- 	
 
  </div>
