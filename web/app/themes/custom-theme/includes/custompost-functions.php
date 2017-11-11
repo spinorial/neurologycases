@@ -42,4 +42,40 @@ function create_article_post_type()
     );
 }
 
+function create_tip_post_type(){
+
+        register_post_type('neurotip',
+        array(
+            'labels' => array(
+                'name' => __('Neurotips'),
+                'singular_name' => __('Neurotip')
+            ),
+            'public' => true,
+            'description' => 'Neurology Tips',
+            'menu_position' => 5,
+            'menu_icon' => 'dashicons-media-document',
+            'show_in_rest' => true,
+            'supports' => [
+                'thumbnail',
+                'title',
+//            'editor',
+                'author',
+//                'comments',
+                'revisions'
+
+            ],
+            'taxonomies' => [
+                'category',
+                'post_tag'
+            ],
+            'hierarchical'       => false,
+            'has_archive' => false
+        )
+    );
+
+}
+add_action( 'init', 'create_tip_post_type' );
+
+
+
 ?>

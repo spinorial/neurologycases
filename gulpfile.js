@@ -9,7 +9,7 @@ var gulp  = require('gulp');
 var sass = require('gulp-sass');
 
 gulp.task('default', [
-  'jquery_assets','bootstrap_assets','build-css','copy-js'
+  'jquery_assets','bootstrap_assets','build-css','copy-js','slick_assets'
 ]);
 
 
@@ -26,6 +26,17 @@ gulp.task('bootstrap_assets', function(){
   gulp.src(nodeModulesDir + 'bootstrap/dist/js/bootstrap.js').pipe(gulp.dest(publicDir +'/js'));
   gulp.src(nodeModulesDir + 'bootstrap/dist/css/bootstrap.css').pipe(gulp.dest(publicDir +'/css'));
 })
+
+//Slick setup
+
+gulp.task('slick_assets', function(){
+  gulp.src(nodeModulesDir + 'slick-carousel/slick/slick.css').pipe(gulp.dest(publicDir +'/css'));
+  gulp.src(nodeModulesDir + 'slick-carousel/slick/slick-theme.css').pipe(gulp.dest(publicDir +'/css'));
+  gulp.src(nodeModulesDir + 'slick-carousel/slick/slick.min.js').pipe(gulp.dest(publicDir +'/js'));
+  gulp.src(nodeModulesDir + 'slick-carousel/slick/fonts/*').pipe(gulp.dest(publicDir +'/css/fonts'));
+  gulp.src(nodeModulesDir + 'slick-carousel/slick/ajax-loader.gif').pipe(gulp.dest(publicDir +'/css/'));
+})
+
 
 
 //Compile SCSS from assets folder to public

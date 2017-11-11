@@ -8,6 +8,6 @@
 ?>
 <form method="get" id="searchform" action="<?php echo esc_url( home_url( '/' ) ); ?>" role="search">
 	<label for="s" class="screen-reader-text"><?php esc_html_e( 'Search', 'independent-publisher' ); ?></label>
-	<input type="text" class="field" name="s" style ="width:80%;margin-top:6px" value="<?php echo esc_attr( get_search_query() ); ?>" id="s" placeholder="<?php esc_attr_e( 'Search &hellip;', 'independent-publisher' ); ?>" />
-	<input type="submit" class="submit" name="submit" style="width:18%;margin-top:6px;margin-left:4px" id="searchsubmit" value="<?php esc_attr_e( 'Search', 'independent-publisher' ); ?>" />
+	<input type="text" class="field" name="s" style ="width:100%;margin-top:8px" value="<?php echo esc_attr( get_search_query() ); ?>" id="s" placeholder="<?php esc_attr_e( 'Search &hellip;', 'independent-publisher' ); ?>" />
+	<input type="submit" class="submit" name="submit" style="width:18%;margin-top:6px;margin-left:4px;display:none" id="searchsubmit" value="<?php esc_attr_e( 'Search', 'independent-publisher' ); ?>" />
 </form>

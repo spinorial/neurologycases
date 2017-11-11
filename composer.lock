@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "2df08f2446be890cd46984b1db78a006",
-    "content-hash": "e8df655de1277ef50f8a67c743496368",
+    "hash": "e80b255fb88b3daba76f4e0c225b52db",
+    "content-hash": "cc8c21f4c0ccd3371bffd5c7928ff2b1",
     "packages": [
         {
             "name": "composer/installers",
@@ -500,6 +500,26 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/tinymce-advanced/"
+        },
+        {
+            "name": "wpackagist-plugin/wp-carousel-free",
+            "version": "1.4.6",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/wp-carousel-free/",
+                "reference": "trunk"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/wp-carousel-free.zip?timestamp=1507875002",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/wp-carousel-free/"
         },
         {
             "name": "wpackagist-theme/independent-publisher",

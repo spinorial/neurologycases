@@ -13,6 +13,10 @@ get_header(); ?>
 		<div>
 		<main>
 
+			<?php  ?>
+
+			
+
 			<?php 	$article_posts = new WP_Query( array (
 											  'post_type' => 'article',
 											  'posts_per_page' => 6
